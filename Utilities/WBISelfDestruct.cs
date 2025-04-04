@@ -36,6 +36,9 @@ namespace WildBlueIndustries
         [KSPField]
         public bool explodeWhenStaged = false;
 
+        [KSPField]
+        public bool killParentPart = false;
+
         public override void OnStart(StartState state)
         {
             base.OnStart(state);
@@ -57,9 +60,17 @@ namespace WildBlueIndustries
             }
 
             if (!poofNotBoom)
-                this.part.explode();
+            {
+                if (killParentPart)
+                    part.parent.explode();
+                part.explode();
+            }
             else
-                this.part.Die();
+            {
+                if (killParentPart)
+                    part.parent.Die();
+                part.Die();
+            }
         }
 
         [KSPAction("Detonate")]

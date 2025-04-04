@@ -118,5 +118,10 @@ namespace WildBlueIndustries
         {
             GameEvents.onGUIEditorToolbarReady.Add(AddFilterByMod);
         }
+
+        public void OnDestroy()
+        {
+            GameEvents.onGUIEditorToolbarReady.Remove(AddFilterByMod);
+        }
     }
 }

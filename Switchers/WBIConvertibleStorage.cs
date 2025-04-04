@@ -57,14 +57,6 @@ namespace WildBlueIndustries
         {
             ReloadTemplate();
 
-            //Reset the omniconverters. This is to prevent duplicate loadouts when you revert a flight and then add a new part with omniconverters.
-            List<WBIOmniConverter> omniConverters = part.FindModulesImplementing<WBIOmniConverter>();
-            int count = omniConverters.Count;
-            for (int index = 0; index < count; index++)
-            {
-                omniConverters[index].ResetSettings();
-            }
-
             setupStorageView(CurrentTemplateIndex);
         }
 
