@@ -140,9 +140,6 @@
     <Compile Include="PlayModes\WBTAppButton.cs" />
     <Compile Include="PlayModes\WBIPlayModeHelper.cs" />
     <Compile Include="Wrappers\KIS\WBIKISInventoryWrapper.cs" />
-    <Compile Include="IVAUtils\ButtonClickDelegate.cs" />
-    <Compile Include="PropModules\InternalPlasmaScreen.cs" />
-    <Compile Include="IVAUtils\ExternalCamera.cs" />
     <Compile Include="GUI\ExternalCameraView.cs" />
     <Compile Include="GUI\WBIResultsDialogSwizzler.cs">
       <SubType>Code</SubType>
@@ -175,8 +172,6 @@
     <Compile Include="Animation\WBIModuleAnimateGeneric.cs" />
     <Compile Include="Parts\WBIPlasmaTV.cs" />
     <Compile Include="Helpers\WBIParachuteHelper.cs" />
-    <Compile Include="PropModules\WBIInternalButtonCabinLight.cs" />
-    <Compile Include="PropModules\WBIPropStateHelper.cs" />
     <Compile Include="Switchers\WBIConvertibleStorage.cs" />
     <Compile Include="Wrappers\KIS\WBIKISSeatInventoryConfig.cs" />
     <Compile Include="Wrappers\KIS\WBISeatInventoryHelper.CS" />
@@ -185,7 +180,6 @@
     <Compile Include="Science\WBIExperimentManifest.cs" />
     <Compile Include="Utilities\WBINodeMover.cs" />
     <Compile Include="Wrappers\KIS\WBIKISInventoryView.cs" />
-    <Compile Include="PropModules\WBIInternalMissionFlag.cs" />
     <Compile Include="Manifest\WBIManifest.cs" />
     <Compile Include="Manifest\WBIManifestScenario.cs" />
     <Compile Include="Manifest\WBIResourceManifest.cs" />
@@ -193,9 +187,6 @@
     <Compile Include="Wrappers\KIS\WBIKISIcon.cs" />
     <Compile Include="Manifest\WBIKISInventoryManifest.cs" />
     <Compile Include="Utilities\WBIEngineRepLoss.cs" />
-    <Compile Include="PropModules\WBIDiscoBall.cs" />
-    <Compile Include="PropModules\WBIDanceFloor.cs" />
-    <Compile Include="PropModules\WBIJukebox.cs" />
     <Compile Include="Parts\WBICruiseControl.cs" />
     <Compile Include="Utilities\WBIPartDeprecator.cs" />
     <Compile Include="Converters\WBIModuleResourceConverterFX.cs" />
@@ -223,7 +214,6 @@
     <Compile Include="Utilities\WBIAsteroidSelector.cs" />
     <Compile Include="Utilities\WBISelfDestruct.cs" />
     <Compile Include="Utilities\WBIDivas.cs" />
-    <Compile Include="PropModules\WBIInternalButtonAnim.cs" />
     <Compile Include="Parts\WBIFieldUpgrade.cs" />
     <Compile Include="Utilities\WBIPowerMonitor.cs" />
     <Compile Include="Parts\WBIDualAxisSolarArray.cs" />

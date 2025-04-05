@@ -28,14 +28,12 @@ namespace WildBlueIndustries
         public bool showAlphaControl;
         public bool screenIsVisible;
 
-        protected ExternalCamera externalCamera;
         protected string[] imagePaths;
         protected string[] fileNames;
         protected string[] viewOptions = { "Screenshots", "Camera" };
         protected int viewOptionIndex;
         protected int selectedIndex;
         protected int prevSelectedIndex = -1;
-        List<WBICamera> cameras = new List<WBICamera>();
 
         private Vector2 _scrollPos;
 
@@ -61,17 +59,6 @@ namespace WildBlueIndustries
                 names.Add(pictureName.Replace(screeshotFolderPath, ""));
             }
             fileNames = names.ToArray();
-
-            if (HighLogic.LoadedSceneIsFlight)
-            {
-                cameras.Clear();
-                foreach (Part part in this.part.vessel.parts)
-                {
-                    WBICamera camera = part.FindModuleImplementing<WBICamera>();
-                    if (camera != null)
-                        cameras.Add(camera);
-                }
-            }
         }
 
         public void GetRandomImage()
@@ -193,60 +180,6 @@ namespace WildBlueIndustries
                 SetVisible(false);
             }
             GUILayout.EndHorizontal();
-        }
-
-        protected void drawCameraSelectors()
-        {
-            if (HighLogic.LoadedSceneIsFlight)
-            {
-                if (cameras.Count > 0)
-                {
-                    GUILayout.BeginHorizontal();
-                    if (GUILayout.Button("<", new GUILayoutOption[] {GUILayout.Width(30) }))
-                    {
-                        cameraIndex -= 1;
-                        if (cameraIndex < 0)
-                            cameraIndex = cameras.Count - 1;
-                    }
-
-                    GUILayout.FlexibleSpace();
-                    GUILayout.Label(cameras[cameraIndex].cameraName);
-                    GUILayout.FlexibleSpace();
-
-                    if (GUILayout.Button(">", new GUILayoutOption[] { GUILayout.Width(30) }))
-                    {
-                        cameraIndex += 1;
-                        if (cameraIndex >= cameras.Count)
-                            cameraIndex = 0;
-                    }
-                    GUILayout.EndHorizontal();
-                }
-                else
-                {
-                    GUILayout.Label("No cameras on vessel.");
-                }
-            }
-            else
-            {
-                GUILayout.Label("Cameras only available in flight.");
-            }
-
-            viewOptionIndex = GUILayout.SelectionGrid(viewOptionIndex, viewOptions, 2);
-            if (viewOptionIndex == 1)
-            {
-                if (externalCamera == null)
-                {
-                    externalCamera = new ExternalCamera(cameras[cameraIndex].GetCameraTransform());
-                    previewImage = new Texture2D(externalCamera.CameraWidth, externalCamera.CameraHeight);
-                    externalCamera.UpdateTexture(previewImage);
-                }
-                selectedIndex = 0;
-            }
-
-            else
-            {
-                externalCamera = null;
-            }
         }
     }
 }
