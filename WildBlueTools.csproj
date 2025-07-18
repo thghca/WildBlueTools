@@ -199,11 +199,6 @@
     <Compile Include="Wrappers\KIS\WBIKISAddonConfig.cs" />
     <Compile Include="Wrappers\KIS\WBIKISWrapper.cs" />
     <Compile Include="GUI\WBISingleOpsView.cs" />
-    <Compile Include="Submarine\WBIBallastTank.cs" />
-    <Compile Include="Submarine\WBIAquaticRCS.cs" />
-    <Compile Include="Submarine\WBIAquaticEngine.cs" />
-    <Compile Include="Submarine\WBIDiveComputer.cs" />
-    <Compile Include="Submarine\WBIPressureOverride.cs" />
     <Compile Include="Utilities\WBIEditorLoader.cs" />
     <Compile Include="Wrappers\WBIRTWrapper.cs" />
     <Compile Include="Parts\WBIModuleDecouple.cs" />
@@ -228,12 +223,8 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetPath)" "C:\KSPDev\GameData\WildBlueIndustries\000WildBlueTools\Plugins\"﻿
-xcopy /Y "$(TargetDir)$(TargetName).dll" "C:\KSPDev\GameData\WildBlueIndustries\000WildBlueTools\Plugins\"
-xcopy /Y "$(TargetDir)$(TargetName).pdb" "C:\KSPDev\GameData\WildBlueIndustries\000WildBlueTools\Plugins\"
-
-xcopy /Y  "C:\KSPDev\GameData\WildBlueIndustries\ClassicStockResources\ClassicStockResources.version" "C:\Projects\KSP\WildBlueIndustries\ClassicStockResources\Notes\"
-xcopy /Y  "C:\KSPDev\GameData\WildBlueIndustries\000WildBlueTools\WildBlueTools.version" "C:\Projects\KSP\WildBlueIndustries\WildBlueTools\Notes\"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

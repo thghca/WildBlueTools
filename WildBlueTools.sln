@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WBIProps", "..\WBIProps\Sou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WBIWidgets", "..\WBIWidgets\Source\WBIWidgets\WBIWidgets.csproj", "{8A81694C-7E5E-4E5E-A65F-20BA63693C24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WBIScience", "..\WBIScience\Source\WBIScience\WBIScience.csproj", "{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -327,6 +329,18 @@ Global
 		{8A81694C-7E5E-4E5E-A65F-20BA63693C24}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8A81694C-7E5E-4E5E-A65F-20BA63693C24}.Release|x86.ActiveCfg = Release|Any CPU
 		{8A81694C-7E5E-4E5E-A65F-20BA63693C24}.Release|x86.Build.0 = Release|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Debug|x86.Build.0 = Debug|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Release|x86.ActiveCfg = Release|Any CPU
+		{CCA4CC8E-ADB8-4572-8B65-AD67ECF48E5F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
