@@ -66,6 +66,13 @@ namespace WildBlueIndustries
             WBIMainSettings.PayToReconfigure = playModesWindow.payToRemodel;
             WBIMainSettings.RequiresSkillCheck = playModesWindow.requireSkillCheck;
         }
+
+        public void OnDestroy()
+        {
+            if (playModesWindow.IsVisible())
+                playModesWindow.SetVisible(false);
+            GameEvents.onGUIApplicationLauncherReady.Remove(SetupGUI);
+        }
     }
 
 
