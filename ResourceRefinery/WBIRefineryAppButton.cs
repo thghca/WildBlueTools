@@ -41,6 +41,7 @@ namespace WildBlueIndustries
         {
             if (refineryView.IsVisible())
                 refineryView.SetVisible(false);
+            GameEvents.onGUIApplicationLauncherReady.Remove(SetupGUI);
         }
 
         private void SetupGUI()
